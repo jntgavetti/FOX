@@ -1,0 +1,5 @@
+descricao;ip;mascara;interface;observacao
+dns1;189.40.226.80;255.255.255.255;eth0;dns_pri_tim;
+dns2;189.40.224.80;255.255.255.255;eth0;dns_sec_tim;
+dns1;201.6.2.103;255.255.255.255;eth3;dns_pri_virtua;
+dns2;201.6.2.183;255.255.255.255;eth3;dns_sec_virtua;

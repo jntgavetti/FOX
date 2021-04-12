@@ -1,0 +1,4 @@
+ssh=5322
+smtp = 587, 465
+pop=110,995
+softether=5001

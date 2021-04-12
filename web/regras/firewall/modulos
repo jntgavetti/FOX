@@ -1,0 +1,8 @@
+iptable_nat
+ip_conntrack_ftp
+ip_nat_ftp
+ip_nat_pptp
+ip_conntrack_pptp
+ip_gre
+ipv6
+

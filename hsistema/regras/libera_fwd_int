@@ -1,0 +1,50 @@
+## File server H2
+fileserver;b;tcp/udp/icmp;+;172.16.26.0/24;eth1;192.168.5.0/24;1:65535;;;;
+
+## teste
+asd;b;tcp/udp/icmp;tap_dcmtaubate;192.168.33.0/24;eth3;172.16.25.10/32;1:65535;;;;
+
+### Backup Externos ###
+backps;b;tcp/udp/icmp;tap+;172.16.20.0/24;eth1:4;172.16.26.20/32;1:65535;;;;
+backps;b;tcp/udp/icmp;tap+;172.19.0.0/16;eth1:4;172.16.26.20/32;1:65535;;;;
+backps;b;tcp/udp/icmp;tap+;172.16.20.0/24;eth1:4;172.16.26.24/32;1:65535;;;;
+backps;b;tcp/udp/icmp;tap+;172.19.0.0/16;eth1:4;172.16.26.24/32;1:65535;;;;
+
+## DCM Tech ###
+dcmtech;b;tcp/udp/icmp;tap_dcmtech;172.16.21.2/32;eth3;172.16.25.10/32;1:65535;;;;
+
+## Moinho Tur ##
+moinhotur;b;tcp/udp/icmp;tap_moinhotuor;192.168.236.0/24;eth4:1;172.16.27.10/32;1:65535;;;;
+
+## Ina ##
+fileserver;b;tcp/udp/icmp;tap_ina;192.168.235.0/24;eth4:2;172.16.28.10/32;1:65535;;;;
+
+## GWA ##
+fileserver;b;tcp/udp/icmp;tap_gwa;192.168.238.0/24;eth4:3;172.16.29.10/32;1:65535;;;;
+
+## H2E
+fileserver;b;tcp/udp/icmp;tap_h2e;192.168.237.0/24;eth4:4;172.16.31.2/32;1:65535;;;;
+
+## DMaria
+fileserver;b;tcp/udp/icmp;tap_dmaria;192.168.239.0/24;eth4:5;172.16.35.10/32;1:65535;;;;
+
+## AM2
+fileserver;b;tcp/udp/icmp;tap_am2;192.168.240.0/24;eth4:6;172.16.36.10/32;1:65535;;;;
+
+
+## VPN geral ##
+vpngeral;b;all;tap_vpngeral;172.16.22.0/24;eth1;192.168.5.0/24;1:65535;
+vpngeral;b;all;tap_vpngeral;172.16.22.0/24;eth1;192.168.6.0/24;1:65535;
+vpngeral;b;all;tap_vpngeral;172.16.22.0/24;eth1:4;172.16.26.20/32;1:65535;
+vpngeral;b;all;tap_vpngeral;172.16.22.0/24;eth5:2;172.16.31.2/32;1:65535;
+
+# Backup 2 RC Pira #
+vpn2rcpira;b;tcp/udp/icmp;tap_bkp2rcpira;172.19.6.0/24;eth1:4;172.16.26.0/24;1:65535;;;;;
+
+# Backup Interno #
+
+backup;b;all;eth4;172.16.26.23/32;eth1;192.168.5.23/32;1:65535;;;;;
+backup;b;all;eth4;172.16.26.23/32;eth1;192.168.5.20/32;1:65535;;;;;
+
+#Backups Externos com novo endereço
+BackpNovaOdessa;b;tcp/udp/icmp;tap+;172.29.6.0/24;eth1:4;172.16.26.20/32;1:65535;;;;

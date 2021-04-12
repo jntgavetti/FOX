@@ -1,0 +1,5 @@
+rsync_backup;a;tcp;0/0;82;;;;;
+rsync_backup;a;tcp;0/0;873;;;;;
+rsync_backup;a;tcp;0/0;5322;;;;
+softether;a;tcp;0/0;5001;;;;;
+zenvia;a;tcp;api-rest.zenvia.com;443;;

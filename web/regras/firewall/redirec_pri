@@ -1,0 +1,2 @@
+ssh;a;udp;0/0;80;192.168.0.0/24;5322
+TS-SERVER;a;tcp;suporteh2.ddns.com.br/24;3389;192.168.0.2/32;3389
