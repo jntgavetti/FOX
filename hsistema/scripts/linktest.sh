@@ -34,7 +34,7 @@ IS="/usr/sbin/ipsec"
 LINK1=`cat /opt/hsistema/config/cliente.txt | grep host_12 | cut -d ' ' -f 3`
 
 
-link_fail () {
+link_fail () 
                 LSTATUS=down
                 IP_EXTERNO=`cat /opt/hsistema/config/ip_$DEV_EXT.txt`
                 echo "$IP_EXTERNO" > /opt/hsistema/links/w"$enum"ipExterno
