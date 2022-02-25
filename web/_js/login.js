@@ -15,7 +15,7 @@
                 $('p.aviso').text(msg.responseText);
                 $('p.aviso').css('display', 'block');
             } else {
-                window.location.href = "listagem_dispositivos.php";
+                window.location.href = "main.php";
             }
 
 

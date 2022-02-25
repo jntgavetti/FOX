@@ -1,5 +1,10 @@
-nome = Jonathan;
-setor = TI;
-ipv4 = 169.254.254.17;
-mac = AA:AA:AA:AA:AA;
+nome = teste;
+setor = teste;
+ipv4 = 1.1.1.1234;
+mac = 1.1.1.1;
+;;;
+nome = teste;
+setor = teste;
+ipv4 = 3.3.3.3;
+mac = 2.2.2.2;
 ;;;

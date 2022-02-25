@@ -146,7 +146,15 @@ function dragElement(e, elmnt) {
 
 
 $(document).ready(function () {
-    
+    $('div#conteudo').load('interfaces.php')
+
+    $('.link_page').on('click', function(click){
+        click.preventDefault()
+        let link = this.href;
+        
+        $('div#conteudo').load(link)
+    })
+
     nivel_login = $('.nivelAcesso');
     if (nivel_login.hasClass('admin')) {
         nivel_login.text("#");

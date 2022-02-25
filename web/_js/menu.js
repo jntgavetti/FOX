@@ -3,22 +3,24 @@ $.easing.def = "easeOutBounce";
     $('.toast').toast({ delay: 5000 });
 
     function hideSubMenu() { // Função que oculta todos os submenus abertos
-        $(".link-item").addClass('liDisabled');
-        $(".link-item").removeClass('liEnabled');
-        $(".link-item svg").addClass('icon-disabled');
-        $(".link-item svg").removeClass('icon-enabled');
-        $(".link-item .arrow-enabled").addClass('arrow-disabled');
-        $(".link-item .arrow-enabled").removeClass('arrow-enabled');
-        $('.link-item').siblings().slideUp("fast");
+        $(".menu-item").addClass('liDisabled');
+        $(".menu-item").removeClass('liEnabled');
+        $(".menu-item svg").addClass('icon-disabled');
+        $(".menu-item svg").removeClass('icon-enabled');
+        $(".menu-item .arrow-enabled").addClass('arrow-disabled');
+        $(".menu-item .arrow-enabled").removeClass('arrow-enabled');
+        $('.menu-item').find('.dropdown-ul').slideUp("fast");
     }
 
     /* Submenus */
-    $(".link-item").on('click', function () { // Quando clicar no menu principal
+    $(".menu-item").on('click', function () { // Quando clicar no menu principal
+
+        
         liMain = $(this).parent(); // LI pai do link
         liStat = $(this).hasClass('liDisabled') // Status do submenu
-        dropdownMenu = $(this).siblings(); // Submenu
-        dropdownArrow = $(this).children().eq(2); // Icone de seta
-        dropdownDesc = $(this).children().eq(0); // Icone de descrição
+        dropdownMenu = $(this).find('.dropdown-ul'); // Submenu
+        dropdownArrow = $(this).find('.arrow-icon'); // Icone de seta
+        dropdownDesc = $(this).find('.desc-icon'); // Icone de descrição
 
         if (liStat) { // Verifica se se o submenu esta fechado
             // Se estiver fechado, oculta qualquer outro submenu e abre o que foi clicado
