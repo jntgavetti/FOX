@@ -294,12 +294,7 @@
         font-family: verdana;
         font-size: 14px;
     }
-
-    table th {
-        font-size: 14px;
-        font-weight: 500;
-    }
-
+    
     table th:nth-child(1):hover,
     table tr td:hover {
         cursor: pointer;
@@ -1712,131 +1707,7 @@
         line-height: 10px;
     }
 
-    /* ========================================= */
-
-    .body-interface #lista {
-        top: 0;
-        width: 100%;
-    }
-
-    .body-interface form, .body-add-lan form {
-        border-radius: 10px;
-        padding: 20px;
-        box-shadow: 1px 1px 10px #ccc;
-        margin-top: 20px;
-    }
-
-
-    .body-interface .container .interface .div-conf, .body-add-lan .container .interface .div-conf {
-        position: relative;
-    }
-
-    .body-interface .container .interface div.legend, .body-add-lan .container .interface div.legend {
-        color: #6c757d;
-        font-weight: normal;
-        display: inline !important;
-    }
-
-
-    .body-interface .container .interface div.legend svg {
-        color: rgb(255, 102, 18);
-        font-size: 1.5em;
-    }
-
-    .body-interface .container .interface .div-conf button[id="save"], .body-add-lan .container .interface .div-conf button[id="save"] {
-        margin: 20px 0 20px 0;
-    }
-
-    .body-interface .container .interface .div-info-valor, .body-add-lan .container .interface .div-info-valor {
-        display: block;
-        position: relative;
-        left: 0 !important;
-    }
-
-    .body-interface .container .interface .div-info-valor label, .body-add-lan .container .interface .div-info-valor label {
-        display: inline-block;
-        margin: 0 0 20px 0;
-        font-size: .8em;
-        color: #777;
-    }
-
-    .body-interface input, .body-interface select {
-        position: absolute;
-        right: 0;
-        height: 25px;
-        width: 130px;
-        text-transform: capitalize;
-    }
-
-    .body-interface input[name=interface], .body-interface select {
-        width: 90px !important;
-    }
-
-    .body-interface input[name=interface] {
-        text-transform: uppercase !important;
-    }
-
-    .body-interface input[name=tipo_placa] {
-        width: 90px !important;
-    }
-
-
-    .body-lista-lan #lista-interfaces table tr td, .body-lista-wan #lista-interfaces table tr td {
-        text-transform: capitalize;
-    }
-
-    .body-lista-lan #lista-interfaces table tr td:first-child, .body-lista-wan #lista-interfaces table tr td:first-child {
-        text-transform: uppercase;
-    }
-
-
-    .body-interface .container .interface p#aviso {
-        margin-top: 50px;
-        text-align: center;
-        color: red;
-        display: none;
-    }
-
-    .body-interface .aside-back, .body-add-lan .aside-back {
-        position: absolute;
-        left: 70px;
-        top: 100px;
-        font-size: 1.5em;
-        z-index: 999;
-    }
-
-    .body-interface #save:hover {
-        background-color: #000 !important;
-        color: #fff;
-    }
-
-    .body-interface #delete {
-        float: right;
-        top: -10px;
-    }
-
-    .body-interface .aside-add {
-        position: absolute;
-        right: 0;
-        top: 0px;
-    }
-
-    .body-interface a {
-        color: #888;
-    }
-
-    .body-interface .aside-add:hover svg {
-        color: green;
-        cursor: pointer;
-    }
-
-    .body-add-lan #requiredWarning {
-        color: red;
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    /* =+=+=+=+=+=+=====++++++++++++++++ /*
+/* ========================================= */
 
 
 /* Provedores */

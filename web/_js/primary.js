@@ -146,7 +146,7 @@ function dragElement(e, elmnt) {
 
 
 $(document).ready(function () {
-    $('div#conteudo').load('interfaces.php')
+    $('div#conteudo').load('interfaces.html')
 
     $('.link_page').on('click', function(click){
         click.preventDefault()

@@ -1,0 +1,99 @@
+<link rel="stylesheet" href="_css/interfaces.css">
+<div class="body-interface main">
+
+    <div class="div_btn">
+        <button class="btn btn-outline-success btn-sm">
+            <i class="fas fa-plus coll_icon"></i>
+            Adicionar interface
+        </button>
+    
+        <button class="btn btn-outline-secondary btn-sm disabled">
+            <i class="fas fa-pen coll_icon"></i>
+            Editar
+        </button>
+    
+        <button class="btn btn-outline-danger btn-sm disabled">
+            <i class="fas fa-trash coll_icon"></i>
+            Remover
+        </button>
+    </div>
+    
+    <table>
+        
+        <thead class="text-center">
+            <th></th>
+            <th>Interface</th>
+            <th>Endereçamento</th>
+            <th>Endereço IPv4</th>
+            <th>Endereço IPv6</th>
+            <th>DHCPV4</th>
+            <th>DHCPV6</th>
+            <th>Status</th>
+        </thead>
+
+
+
+        <tbody>
+            <tr class="acc_header_phy">
+                <td colspan="8" class="cat_collapse">
+                    <i class="fas fa-minus-square coll_icon"></i>
+                    <i class="fas fa-ethernet desc_icon"></i>
+                    <span class="title_int">Interfaces físicas</span>
+                    <span class="badge bg-secondary">2</span>
+                </td>
+            </tr>
+
+            <tr class="tr_phy">
+                <td class="td_empty"></td>
+                <td>
+                    <i class="fas fa-ethernet desc_icon"></i> eth0
+                </td>
+                <td>Estático</td>
+                <td>192.168.0.1/24</td>
+                <td></td>
+                <td>192.168.0.10 - 192.168.0.254</td>
+                <td></td>
+                <td>Ativa</td>
+            </tr>
+
+            <tr class="tr_phy">
+                <td class="td_empty"></td>
+                <td>
+                    <i class="fas fa-ethernet desc_icon"></i> eth1
+                </td>
+                <td>DHCP</td>
+                <td>192.168.1.1/24</td>
+                <td></td>
+                <td>192.168.0.10 - 192.168.0.254</td>
+                <td></td>
+                <td>Inativa</td>
+            </tr>
+
+            <tr class="acc_header_vir">
+                <td colspan="8" class="cat_collapse">
+                    <i class="fas fa-minus-square coll_icon"></i>
+                    <i class="fa fa-sitemap desc_icon"></i>
+                    <span class="title_int">Interfaces virtuais</span>
+                    <span class="badge bg-secondary">1</span>
+                </td>
+            </tr>
+
+            <tr class="tr_vir">
+                <td class="td_empty"></td>
+                <td>
+                    <i class="fa fa-sitemap desc_icon"></i>eth0:1
+                </td>
+                <td>Estático</td>
+                <td>192.168.5.1/24</td>
+                <td></td>
+                <td>192.168.0.10 - 192.168.0.254</td>
+                <td></td>
+                <td>Ativa</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+<script src="_js/interfaces.js"></script>
