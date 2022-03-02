@@ -20,11 +20,11 @@ class InterfaceService
         LEFT JOIN
             ipv4 i4
         ON
-            f.nome = i4.interface
+            f.nome = i4.ipv4_interface
         LEFT JOIN
             ipv6 i6
         ON
-            f.nome = i6.interface
+            f.nome = i6.ipv6_interface
         GROUP BY f.nome;
         
         ";

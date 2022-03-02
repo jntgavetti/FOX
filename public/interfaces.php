@@ -47,6 +47,7 @@ require "interfaces.controller.php";
 
 
             <?php
+           
                 foreach($interfaces as $interface){
                     
                     if($interface->funcao == 'lan'){
