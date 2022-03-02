@@ -12,7 +12,7 @@ function page_loading(status) {
 
 
     let req = $.ajax({
-        type: 'POST',
+        type: 'GET',
         cache: false,
         url: urlPost,
         async: true,
@@ -146,7 +146,7 @@ function dragElement(e, elmnt) {
 
 
 $(document).ready(function () {
-    $('div#conteudo').load('interfaces.html')
+    $('div#conteudo').load('interfaces.php')
 
     $('.link_page').on('click', function(click){
         click.preventDefault()

@@ -52,21 +52,18 @@ $.easing.def = "easeOutBounce";
     /* Fim submenu */
 
     /* Menu Responsivo */
-    $('.btn-show-menu').on('click', function () {
-        $('body, html').css('overflow-y', 'hidden')
-        $('nav.nav-main').css('display', 'block');
-        $('nav.nav-main').css('position', 'absolute')
-        $('#divMenuEscuro').css('display', 'block')
-        $('#divMenuEscuro').css('z-index', '1')
-    })
 
-    $('#divMenuEscuro').on('click', function () {
-        $('body, html').css('overflow-y', 'auto')
-        $('nav.nav-main').css('display', 'none');
-        $('#divMenuEscuro').css('display', 'none')
-        $('#divMenuEscuro').css('z-index', '0')
-    })
+    $('.btn-menu').on('click', function () {
 
+        if($('.nav-main').is(':visible')){
+            $('.nav-main').hide();
+            $('.div_menuH').css('width', '100%')
+        }else{
+            $('.nav-main').show();
+            $('.div_menuH').css('width', '')
+        }
+        
+    })
 
 })
     /* Fim Menu Responsivo */

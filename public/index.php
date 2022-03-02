@@ -23,7 +23,7 @@ if (!isset($_SESSION['id_usuario'])) {
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" href="_css/primary.css" />
 	<script src="jquery/jquery.js"></script>
-	
+
 
 </head>
 
@@ -38,7 +38,9 @@ if (!isset($_SESSION['id_usuario'])) {
 					<a class="" href="#">
 						<img src="_img/fox_icon.png" width="40" height="40" class="" alt="">
 					</a>
-
+					<button class="btn-menu btn-mob-menu" type="button">
+						<i class="fas fa-bars"></i>
+					</button>
 				</div>
 				<hr>
 				<ul class="nav-ident">
@@ -105,23 +107,20 @@ if (!isset($_SESSION['id_usuario'])) {
 		</header>
 
 
-		<div class="col-10 p-0">
+		<div class="div_menuH col-xl-10 col-lg-9 col-md-12 col-sm-12 col-xs-12 p-0">
 
 			<nav class="menuH">
-				<button class="btn btn-show-menu navbar-toggler" type="button">
+
+				<button class="btn-menu btn-show-menu" type="button">
 					<i class="fas fa-bars"></i>
 				</button>
-				<a class="navbar-brand" href="#">
-					<img src="" width="30" height="30" class="mr-2 d-inline-block align-bottom" alt="">
-					H2 Informatica
-				</a>
+
 				<div class="divBread">
-					<span class="nivelAcesso <?php echo $nivel_login; ?>">
-					</span>
+					<span class="nivelAcesso">#</span>
 					<a href="#" class="active">LAN</a>
 				</div>
 				<div class="conf">
-					<span><?php echo $nome_usuario; ?></span>
+					<span>H2 Informatica</span>
 					<i class="fas fa-cog"></i>
 					<a href='#' onclick='window.location.assign("logout.php")'>
 						<i class='fas fa-power-off'></i>

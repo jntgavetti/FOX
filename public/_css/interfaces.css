@@ -2,10 +2,6 @@
     margin-top: 50px;
 }
 
-.div_btn{
-    margin-left: 10px;
-}
-
 
 table{
     border-collapse: collapse;
@@ -14,7 +10,7 @@ table{
 }
 
 th, td{
-    padding: 4px;
+    padding: 3px;
     font-weight: normal;
 }
 
@@ -28,7 +24,7 @@ td, th{
     border-top: none;
 }
 
-td:nth-child(2){text-transform: uppercase;}
+
 
 .acc_category{
     background: var(--menu-light);
@@ -49,15 +45,21 @@ td:nth-child(2){text-transform: uppercase;}
     background-color: var(--bs-gray-400);
 }.tr_disabled{background-color: inherit;}
 
-tr img{width: 15px;}
-.phy_icon{font-size: 17px;}
-.vir_icon{margin-left: 10px;}
+.phy_icon{font-size: 17px;margin-left: 10px;}
+.vir_icon{font-size: 15px;margin-left: 30px;}
 .wan_icon{color: var(--bs-success);}
 .lan_icon{color: var(--bs-danger);}
 
 
 .td_collapse{
     text-align: center;
+    width: 30px;
 }
 
 
+@media (max-width:1000px) {
+    table{
+        width: 90%;
+        margin: 20px auto;
+    }
+}
