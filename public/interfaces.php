@@ -1,6 +1,6 @@
 <?php
-$action = "list";
-require "interfaces.controller.php";
+    $action = "list";
+    require "interfaces.require.php";
 ?>
 
 
@@ -23,6 +23,10 @@ require "interfaces.controller.php";
         </button>
     </div>
 
+    <div id="pesquisa">
+        <!-- <input type="search" class="d-inline ml-5"> -->
+    </div>
+
     <table class="">
 
         <thead class="text-center">
@@ -37,93 +41,182 @@ require "interfaces.controller.php";
 
         <tbody>
 
-            <tr class="acc_category">
+            <tr class="acc_category tr_phy">
                 <td class="td_collapse"></td>
                 <td colspan="9">
                     <span class='title_category'>LAN</span>
-                    <span class="badge bg-secondary">2</span>
+                    <span class="badge bg-secondary"></span>
                 </td>
             </tr>
 
 
             <?php
-                foreach($interfaces as $interface){
-                    
-                    if($interface->funcao == 'lan'){
-                        if($interface->tipo == 'fisica'){
-                            $tr = 'tr_phy';
-                            $icon = 'fas fa-ethernet phy_icon lan_icon';
-                        }else{
-                            $tr = 'tr_vir';
-                            $icon = 'fas fa-sitemap vir_icon lan_icon';
-                        }
+            foreach ($interfaces as $key => $interface) {
+                if ($interface['funcao'] == 'lan') {
+                    if ($interface['tipo'] == 'fisica') {
             ?>
 
-            <tr class=<?=$tr?>>
-                <td class="td_collapse"></td>
-                <td>
-                    <i class="<?=$icon?>"></i>
-                    <?=$interface->nome?>
-                </td>
-                <td><?=$interface->tipo?></td>
-                <td><?=$interface->mac?></td>
-                <td>
-                    <?php 
-                    
-                    echo str_replace(',', '<br>', $interface->ipv4);
-                        
-                    ?>
-                </td>
-                <td><?=$interface->ipv6?></td>
-                <td><?=$interface->status?></td>
-            </tr>
+                        <tr class='tr_phy'>
+                            <td class='td_collapse'></td>
+                            <td class="table-iface">
+                            <img src="_img/ethernet_lan.png" class='phy_icon lan_icon'>
+                                <span>
+                                <?= $interface["interface"] ?>
+                                </span>
+                            </td>
+                            <td><?= $interface["tipo"] ?></td>
+                            <td><?= $interface["mac"] ?></td>
+                            <td><?= $interface["ipv4"] ?></td>
+                            <td><?= $interface["ipv6"] ?></td>
+                            <td><?= $interface["status"] ?></td>
+                        </tr>
+
+                    <?php } else { ?>
+                        <tr class='tr_vir tr_child <?= $interface["interface_pai"]?>'>
+                        <td class='td_collapse'></td>
+                            <td class="table-iface">
+                                <img src="_img/hierarchy_lan.png" class="vir_icon child_icon">
+                                <span>
+                                <?= $interface["interface"] ?>
+                                </span>
+                            </td>
+                            <td><?= $interface["tipo"] ?></td>
+                            <td>N/D</td>
+                            <td><?= $interface["ipv4"] ?></td>
+                            <td><?= $interface["ipv6"] ?></td>
+                            <td><?= $interface["status"] ?></td>
+                        </tr>
 
             <?php
-                        
+
                     }
                 }
+            }
             ?>
+
 
 
             <tr class="acc_category tr_phy">
                 <td class="td_collapse"></td>
                 <td colspan="9">
                     <span class='title_category'>WAN</span>
-                    <span class="badge bg-secondary">2</span>
                 </td>
             </tr>
 
-
             <?php
-                foreach($interfaces as $interface){
-                    
-                    if($interface->funcao == 'wan'){
-                        if($interface->tipo == 'fisica'){
-                            $tr = 'tr_phy';
-                            $icon = 'fas fa-ethernet phy_icon wan_icon';
-                        }else{
-                            $tr = 'tr_vir';
-                            $icon = 'fas fa-sitemap vir_icon wan_icon';
-                        }
+            foreach ($interfaces as $key => $interface) {
+                if ($interface['funcao'] == 'wan') {
+                    if ($interface['tipo'] == 'fisica') {
             ?>
 
-            <tr class=<?=$tr?>>
+                        <tr class='tr_phy'>
+                            <td class='td_collapse'></td>
+                            <td class="table-iface">
+                            <img src="_img/ethernet_wan.png" class='phy_icon wan_icon'>
+                                <span>
+                                <?= $interface["interface"] ?>
+                                </span>
+                            </td>
+                            </td>
+                            <td><?= $interface["tipo"] ?></td>
+                            <td><?= $interface["mac"] ?></td>
+                            <td><?= $interface["ipv4"] ?></td>
+                            <td><?= $interface["ipv6"] ?></td>
+                            <td><?= $interface["status"] ?></td>
+                        </tr>
+
+                    <?php } else { ?>
+                        <tr class='tr_vir tr_child'>
+                            <td class='td_collapse'>
+                           
+                            </td>
+                            
+                            <td class="table-iface">
+                            <img src="_img/hierarchy_wan.png" class="vir_icon child_icon">
+                                <span>
+                                <?= $interface["interface"] ?>
+                                </span>
+                            </td>
+                            <td><?= $interface["tipo"] ?></td>
+                            <td>N/D</td>
+                            <td><?= $interface["ipv4"] ?></td>
+                            <td><?= $interface["ipv6"] ?></td>
+                            <td><?= $interface["status"] ?></td>
+                        </tr>
+
+            <?php
+
+                    }
+                }
+            }
+            ?>
+
+            <tr class="acc_category tr_phy">
                 <td class="td_collapse"></td>
-                <td>
-                    <i class="<?=$icon?>"></i>
-                    <?=$interface->nome?>
+                <td colspan="9">
+                    <span class='title_category'>VPN</span>
                 </td>
-                <td><?=$interface->tipo?></td>
-                <td><?=$interface->mac?></td>
-                <td><?=$interface->ipv4?></td>
-                <td><?=$interface->ipv6?></td>
-                <td><?=$interface->status?></td>
             </tr>
 
             <?php
-                        
-                    }
+            foreach ($interfaces as $key => $interface) {
+                if ($interface['funcao'] == 'vpn') { ?>
+
+
+                        <tr class='tr_vir'>
+                            <td class='td_collapse'></td>
+                            <td class="table-iface">
+                            <img src="_img/vpn.png" class='vir_icon vpn_icon'>
+                                <span>
+                                <?= $interface["interface"] ?>
+                                </span>
+                            </td>
+                            <td><?= $interface["tipo"] ?></td>
+                            <td><?= $interface["mac"] ?></td>
+                            <td><?= $interface["ipv4"] ?></td>
+                            <td><?= $interface["ipv6"] ?></td>
+                            <td><?= $interface["status"] ?></td>
+                        </tr>
+                   
+                     
+            <?php
+                   
                 }
+            }
+            ?>
+
+            <tr class="acc_category tr_phy">
+                <td class="td_collapse"></td>
+                <td colspan="9">
+                    <span class='title_category'>DMZ</span>
+                </td>
+            </tr>
+
+            <?php
+            foreach ($interfaces as $key => $interface) {
+                if ($interface['funcao'] == 'dmz') { ?>
+
+
+                        <tr class='tr_vir'>
+                            <td class='td_collapse'></td>
+                            <td class="table-iface">
+                            <img src="_img/dmz.png" class='vir_icon dmz_icon'>
+                                <span>
+                                <?= $interface["interface"] ?>
+                                </span>
+                            </td>
+                            <td><?= $interface["tipo"] ?></td>
+                            <td><?= $interface["mac"] ?></td>
+                            <td><?= $interface["ipv4"] ?></td>
+                            <td><?= $interface["ipv6"] ?></td>
+                            <td><?= $interface["status"] ?></td>
+                        </tr>
+                   
+                     
+            <?php
+                   
+                }
+            }
             ?>
         </tbody>
 

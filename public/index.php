@@ -28,8 +28,39 @@ if (!isset($_SESSION['id_usuario'])) {
 </head>
 
 <body class="body-interface">
+	<div class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title"></h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="div_loading">
+						<img src="_img/loading_main.svg" alt="">
+						<span class="mt-3">Aguarde ...</span>
+					</div>
 
-	<div class="row p-0">
+					<div class="div_status">
+						<p class="status"></p><br>
+
+						<p class="detalhe_desc">Detalhes do processamento: </p>
+
+						<div class="div_detalhe">
+							<p class="p_detalhe"></p>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-sm btn-outline-primary btn_apply btn_apply_modal">Aplicar</button>
+					<button type="button" class="btn btn-sm btn-outline-danger btn_close" data-dismiss="modal">Fechar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
 
 		<header class="col p-0">
 
@@ -107,7 +138,7 @@ if (!isset($_SESSION['id_usuario'])) {
 		</header>
 
 
-		<div class="div_menuH col-xl-10 col-lg-9 col-md-12 col-sm-12 col-xs-12 p-0">
+		<div class="div_menuH col-xl-10 col-lg-9 col-md-12 col-sm-12 col-xs-12 px-0">
 
 			<nav class="menuH">
 

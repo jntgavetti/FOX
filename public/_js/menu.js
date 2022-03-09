@@ -1,5 +1,5 @@
 $(document).ready(function () {
-$.easing.def = "easeOutBounce";
+    $.easing.def = "easeOutBounce";
     $('.toast').toast({ delay: 5000 });
 
     function hideSubMenu() { // Função que oculta todos os submenus abertos
@@ -15,7 +15,7 @@ $.easing.def = "easeOutBounce";
     /* Submenus */
     $(".menu-item").on('click', function () { // Quando clicar no menu principal
 
-        
+
         liMain = $(this).parent(); // LI pai do link
         liStat = $(this).hasClass('liDisabled') // Status do submenu
         dropdownMenu = $(this).find('.dropdown-ul'); // Submenu
@@ -53,16 +53,19 @@ $.easing.def = "easeOutBounce";
 
     /* Menu Responsivo */
 
+
     $('.btn-menu').on('click', function () {
 
-        if($('.nav-main').is(':visible')){
+        if ($('.nav-main').is(':visible')) {
             $('.nav-main').hide();
-            $('.div_menuH').css('width', '100%')
-        }else{
+            $('.div_menuH').addClass('div_full')
+        } else {
             $('.nav-main').show();
-            $('.div_menuH').css('width', '')
+            $('.div_menuH').removeClass('div_full')
         }
-        
+         
+     
+
     })
 
 })
